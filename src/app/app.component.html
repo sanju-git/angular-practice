@@ -1,10 +1,10 @@
-<h1>Practice</h1>
-
-<p appBasicHighlight>Directive</p>
-
-<input type="text" for="testInput" #test />
-<button (click)="onSubmit(test)">Submit</button>
-
-<div *ngFor="let item of data">
-  <div>{{ item }}</div>
+<div style="display: flex; align-items: center; justify-content: center">
+  <div>
+    <a routerLink="/home">Home</a>
+  </div>
+  &nbsp;
+  <div><a [routerLink]="['/user/1']">User 1</a></div>
+  &nbsp;
+  <div><a routerLink="/user/2">User 2</a></div>
 </div>
+<router-outlet></router-outlet>
