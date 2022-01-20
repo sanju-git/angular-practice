@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { interval, observable, Observable, Subscription } from 'rxjs';
 
 @Component({
@@ -6,7 +6,7 @@ import { interval, observable, Observable, Subscription } from 'rxjs';
   templateUrl: './home-component.component.html',
   styleUrls: ['./home-component.component.css'],
 })
-export class HomeComponentComponent implements OnInit {
+export class HomeComponentComponent implements OnInit, OnDestroy {
   constructor() {}
   obsSub: Subscription;
   ngOnInit(): void {
